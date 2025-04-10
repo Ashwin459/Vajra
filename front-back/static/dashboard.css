@@ -1,0 +1,322 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    background: linear-gradient(to bottom, #2D1B69, #1a103f);
+    min-height: 100vh;
+  }
+  
+  .app {
+    min-height: 100vh;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .btn-logout:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Dashboard Layout */
+  .dashboard {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    gap: 2rem;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+  
+  .profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid #9f7aea;
+  }
+  
+  .profile-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .role {
+    color: #a0aec0;
+  }
+  
+  .stats-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  
+  .stats-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #a0aec0;
+  }
+  
+  .stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  
+  .number {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #fff, #9f7aea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .label {
+    color: #a0aec0;
+  }
+  
+  /* Audit Section */
+  .audit-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  
+  .audit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .audit-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .empty-illustration {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+  }
+  
+  .empty-state h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .empty-state p {
+    color: #a0aec0;
+  }
+  
+  /* New Audit Form */
+  .new-audit-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .new-audit-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .audit-form {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .form-section {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #9f7aea;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #a0aec0;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #9f7aea;
+  }
+  
+  /* File Upload Styling */
+  .file-upload {
+    position: relative;
+  }
+  
+  .file-upload input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  .file-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .file-label:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #9f7aea;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #9f7aea;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #805ad5;
+    transform: translateY(-1px);
+  }
+  
+  .btn-secondary {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .dashboard {
+      padding: 1rem;
+    }
+  
+    .new-audit-section,
+    .audit-section,
+    .form-section {
+      padding: 1rem;
+    }
+  }
